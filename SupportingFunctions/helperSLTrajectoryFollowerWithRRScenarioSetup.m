@@ -1,16 +1,4 @@
 function helperSLTrajectoryFollowerWithRRScenarioSetup(nvp)
-%helperSLTrajectoryFollowerWithRRScenarioSetup initializes parameters for
-%the model.
-% 
-% MaxPathPoints name-value argument defines the upper limit on the number
-% of path points to read from RoadRunner Scenario.
-%
-% NOTE: The name of this helper function and it's functionality may
-% change without notice in a future release, or the helper function
-% itself may be removed.
-%
-
-% Copyright 2021-2024 The MathWorks, Inc.
 
 %%
 arguments
@@ -43,7 +31,7 @@ assignin('base','lr', 1.3050);               % Longitudinal distance from c.g. t
 
 %% Create Simulink bus
 helperCreateBusForTrajectoryFollowerWithRRScenario
-set_param('TrajectoryFollowerRRTestBench/RoadRunner Scenario','PathPoints',num2str(nvp.MaxPathPoints));
+set_param('aBaja2026/RoadRunner Scenario','PathPoints',num2str(nvp.MaxPathPoints));
 % Create RoadRunner interface buses
 evalin("base","load('rrScenarioSimTypes.mat')")
 end
